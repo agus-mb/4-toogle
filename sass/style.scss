@@ -1,0 +1,49 @@
+@use 'reset';
+
+body{
+    background-color: rgb(164, 194, 203);
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: 0.5s;
+
+    &.activo{
+        background-color: rgb(144, 53, 53);
+    }
+}
+
+#toggle{
+    position: relative;
+    display:block;
+    background-color: rgb(72, 143, 143);
+    width: 300px;
+    height: 150px;
+    border-radius: 150px;
+    box-shadow:inset 1px 1px 20px 2px rgb(40, 81, 81);
+transition: 0.5s;
+
+&.activo{
+    background-color: rgb(99, 15, 15);
+    box-shadow:inset 1px 1px 20px 2px  rgb(61, 0, 0);
+
+    .indicador{
+        background-color: aliceblue;
+        background: linear-gradient(to bottom, rgb(99, 15, 15), aliceblue);
+        transition: 0.5s;
+        transform: translateX(100%) scale(0.9);
+    }
+}
+
+    .indicador{
+        background-color: aliceblue;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        border-radius: 50%;
+        background: linear-gradient(to bottom,  rgb(72, 143, 143), aliceblue);
+       transform: scale(0.9);
+       transition: 0.5s;
+    }
+}
